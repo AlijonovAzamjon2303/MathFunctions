@@ -3,8 +3,15 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-        var math = new MathFunctions.Math();
-        Console.WriteLine( math.IsPrime(16));
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] fibs = new int[n];
+        MathFunctions.Math math = new MathFunctions.Math();
+        
+        fibs = math.FirstNFibonacci(n);
+
+        foreach (int fib in fibs)
+        {
+            Console.WriteLine(fib);
+        }
     }
 }
