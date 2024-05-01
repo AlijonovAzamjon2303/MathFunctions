@@ -8,8 +8,11 @@ internal class Program
         MathFunctions.Math math = new MathFunctions.Math();
         
         fibs = math.FirstNFibonacci(n);
-
-        foreach (int fib in fibs)
+        Print(fibs);
+    }
+    static void Print(int[] arr)
+    {
+        foreach(int fib in arr)
         {
             Console.WriteLine(fib);
         }
